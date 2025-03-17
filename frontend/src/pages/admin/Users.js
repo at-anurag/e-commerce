@@ -25,7 +25,9 @@ const Users = () => {
   const fetchUsers = async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/users`);
+      const response = await axios.get(`${API_URL}/users`,  {
+        withCredentials: true, // ✅ Include credentials
+      });
       setUsers(response.data.users);
     } catch (error) {
       setError(error.response?.data?.message || 'Failed to fetch users');
