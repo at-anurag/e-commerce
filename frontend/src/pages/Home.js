@@ -51,7 +51,9 @@ const api = {
     }
     
     // If no cache or expired, make the API call
-    const response = await axios.get(url, options);
+    const response = await axios.get(url, {options,
+                                withCredentials: true, // ✅ Include credentials
+});
     
     // Cache the response
     this.cache.set(cacheKey, {
