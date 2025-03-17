@@ -28,7 +28,9 @@ const CheckoutForm = ({ totalAmount, onSuccess }) => {
         const response = await axios.post(`${API_URL}/payment/process`, {
           amount: totalAmount,
           email: user.email
-        });
+        }, {
+        withCredentials: true, // ✅ Include credentials
+      });
         setClientSecret(response.data.client_secret);
       } catch (error) {
         console.error('Error creating payment intent:', error);
