@@ -1,0 +1,111 @@
+# Dependencies
+node_modules/
+**/node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+**/coverage/
+
+# Production builds
+/build/
+/dist/
+frontend/build/
+backend/dist/
+
+# Environment variables
+.env
+.env.local
+.env.development
+.env.development.local
+.env.test
+.env.test.local
+.env.production
+.env.production.local
+**/.env*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for uploaded files
+/uploads/
+**/uploads/
+frontend/public/uploads/
+backend/uploads/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.project
+.classpath
+.settings/
+*.sublime-workspace
+*.sublime-project
+
+# Package manager files
+.npm
+.yarn-integrity
+yarn-error.log
+.yarn-cache
+.yarn/
+.pnp.*
+
+# Keep package-lock.json in version control for reproducible builds
+# Uncomment the next two lines if you want to ignore package-lock files
+# package-lock.json
+# yarn.lock
+
+# Cache files
+.cache/
+.parcel-cache/
+**/.cache/
+.eslintcache
+.stylelintcache
+.fusebox/
+.dynamodb/
+
+# Build tools
+.grunt/
+.webpack/
+.next/
+out/
+.nuxt/
+.vuepress/dist
+.serverless/
+.netlify/
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+.temp/
+tmp/
+temp/
+
+# OS generated files
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs_vista.db
+
+# Specific project files to ignore
+frontend/src/components/EnvTest.js 

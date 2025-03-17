@@ -1,0 +1,107 @@
+.admin-container {
+  @apply container mx-auto px-4 py-8;
+}
+
+.admin-header {
+  @apply flex justify-between items-center mb-8;
+}
+
+.admin-title {
+  @apply text-2xl font-bold;
+}
+
+.admin-tabs {
+  @apply flex border-b mb-8;
+}
+
+.admin-tab {
+  @apply px-4 py-2 border-b-2 border-transparent text-gray-600 hover:text-primary cursor-pointer;
+}
+
+.admin-tab.active {
+  @apply border-primary text-primary font-medium;
+}
+
+.admin-content {
+  @apply bg-white rounded-lg shadow-md p-6;
+}
+
+.admin-section-title {
+  @apply text-xl font-bold mb-6 pb-4 border-b;
+}
+
+.admin-table {
+  @apply min-w-full divide-y divide-gray-200;
+}
+
+.admin-table-header {
+  @apply bg-gray-50;
+}
+
+.admin-table-header-cell {
+  @apply px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider;
+}
+
+.admin-table-body {
+  @apply bg-white divide-y divide-gray-200;
+}
+
+.admin-table-row {
+  @apply hover:bg-gray-50;
+}
+
+.admin-table-cell {
+  @apply px-6 py-4 whitespace-nowrap;
+}
+
+.admin-action-btn {
+  @apply text-sm px-3 py-1 rounded-md mr-2;
+}
+
+.admin-edit-btn {
+  @apply bg-blue-100 text-blue-800 hover:bg-blue-200;
+}
+
+.admin-delete-btn {
+  @apply bg-red-100 text-red-800 hover:bg-red-200;
+}
+
+.admin-add-btn {
+  @apply btn btn-primary mb-6;
+}
+
+.admin-form {
+  @apply space-y-6;
+}
+
+.admin-form-group {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6;
+}
+
+.admin-form-field {
+  @apply space-y-1;
+}
+
+.admin-form-label {
+  @apply form-label;
+}
+
+.admin-form-input {
+  @apply form-input;
+}
+
+.admin-form-select {
+  @apply form-input;
+}
+
+.admin-form-textarea {
+  @apply form-input h-32 resize-none;
+}
+
+.admin-form-submit {
+  @apply btn btn-primary;
+}
+
+.admin-form-cancel {
+  @apply btn btn-secondary ml-4;
+} 
