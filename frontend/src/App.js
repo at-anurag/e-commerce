@@ -2,6 +2,8 @@ import React, { useEffect, lazy, Suspense } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import axios from 'axios';
+
 
 // Components
 import Header from './components/Header';
@@ -42,6 +44,8 @@ const App = () => {
   const { isAuthenticated, loading, checkAuth } = useAuth();
 
   useEffect(() => {
+  axios.defaults.baseURL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+  axios.defaults.withCredentials = true;
     checkAuth();
   }, [checkAuth]);
 
