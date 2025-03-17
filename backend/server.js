@@ -20,6 +20,9 @@ const paymentRoutes = require('./routes/payment');
 
 const app = express();
 
+// ✅ FIX: Enable trust proxy for Render (Place it here)
+app.set('trust proxy', 1);
+
 // Security middleware
 app.use(helmet()); // Add security headers
 
