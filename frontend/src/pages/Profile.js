@@ -15,7 +15,9 @@ const Profile = () => {
     const fetchOrders = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_URL}/orders/me`);
+        const response = await axios.get(`${API_URL}/orders/me`,  {
+        withCredentials: true, // ✅ Include credentials
+      });
         console.log('Orders data:', response.data);
         setOrders(response.data.orders || []);
       } catch (error) {
