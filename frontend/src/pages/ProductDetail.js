@@ -18,7 +18,9 @@ const ProductDetail = () => {
     const fetchProduct = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`${API_URL}/products/${id}`);
+        const response = await axios.get(`${API_URL}/products/${id}`,  {
+        withCredentials: true, // ✅ Include credentials
+      });
         setProduct(response.data.product);
       } catch (error) {
         setError(error.response?.data?.message || 'Failed to fetch product');
