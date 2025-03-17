@@ -21,7 +21,9 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     try {
       setLoading(true);
-      const response = await axios.post(`${API_URL}/auth/register`, userData);
+      const response = await axios.post(`${API_URL}/auth/register`, userData, {
+      withCredentials: true, // ✅ Include credentials
+    });
       setUser(response.data.user);
       toast.success('Registration successful!');
       return response.data;
@@ -38,7 +40,9 @@ export const AuthProvider = ({ children }) => {
   const login = async (userData) => {
     try {
       setLoading(true);
-      const response = await axios.post(`${API_URL}/auth/login`, userData);
+      const response = await axios.post(`${API_URL}/auth/login`, userData, {
+      withCredentials: true, // ✅ Include credentials
+    });
       setUser(response.data.user);
       toast.success('Login successful!');
       return response.data;
@@ -70,7 +74,9 @@ export const AuthProvider = ({ children }) => {
   const checkAuth = useCallback(async () => {
     try {
       setLoading(true);
-      const response = await axios.get(`${API_URL}/auth/me`);
+      const response = await axios.get(`${API_URL}/auth/me`, {
+      withCredentials: true, // ✅ Include credentials
+    });
       setUser(response.data.user);
     } catch (error) {
       setUser(null);
